@@ -1,48 +1,27 @@
 # Robot Codes
 
-This folder contains the core Python modules for the AIDO robot software stack.
+This folder contains the MicroPython firmware and application logic for the AIDO robot.
 
 ## Overview
 
-The `Robot codes` folder includes the main runtime, UI, sensor drivers, and utility modules used by the robot firmware. These modules are written for MicroPython and are organized by functionality.
+The code is designed to run on the Pico W hardware and includes:
 
-## Files
+- `main.py` — primary application entry point
+- `boot.py` — startup initialization and boot flow
+- `config.py` — hardware pin assignments and configuration values
+- `wifi.py` — WiFi connection manager
+- `voice_client.py` — voice interaction client
+- `tts_client.py` — text-to-speech client
+- `mic.py`, `ssd1306.py`, `mpu6050.py`, `vl53l0x.py` — sensor and display drivers
+- `flashcards.py`, `quiz.py`, `games.py`, `study_sync.py` — learning and interaction features
 
-- `audio.py` - Audio playback and sound helper functions.
-- `boot.py` - Boot-time initialization and startup logic.
-- `boot_anim.py` - Boot animation sequence for the OLED display.
-- `car_anim.py` - Animated car motion visuals for the UI.
-- `config.py` - Device configuration constants and pin assignments.
-- `face.py` - Expressive face engine for OLED-based expressions.
-- `flashcards.py` - Flashcard learning engine.
-- `games.py` - Mini games engine and game logic.
-- `graphics.py` - Graphics primitives and drawing helpers.
-- `icons.py` - Compact bitmap icon definitions.
-- `main.py` - Main AIDO OS application entry point.
-- `menu.py` - Menu system and navigation UI.
-- `mic.py` - Microphone driver and audio sampling logic.
-- `mpu6050.py` - MPU-6050 IMU driver.
-- `neural.py` - Neural map visualizer and graph rendering.
-- `quiz.py` - Quiz engine and question flow.
-- `rps_game.py` - Rock, paper, scissors game logic.
-- `sdcard.py` - SD card driver and mount helpers.
-- `speaker_scan.py` - Speaker / audio output detection and scan helper.
-- `speaker_test.py` - Speaker playback test routines.
-- `ssd1306.py` - SSD1306 OLED driver module.
-- `status.py` - System status bar and status display utilities.
-- `storage_paths.py` - Runtime storage path helpers for SD and flash.
-- `study_sync.py` - Study material synchronization and save helpers.
-- `test.py` - Test utilities and diagnostics helpers.
-- `tof_behavior.py` - Time-of-flight sensor behavior logic.
-- `touch.py` - Touch sensor engine and gesture detection.
-- `tts_client.py` - Text-to-speech client and network interface.
-- `vl53l0x.py` - VL53L0X distance sensor driver.
-- `voice_client.py` - Voice interaction client module.
-- `wifi.py` - WiFi connection manager.
+## Deployment
+
+1. Copy the `Robot codes` files to the Pico W device storage.
+2. Use Thonny, rshell, or a similar MicroPython tool.
+3. Ensure `main.py` is present and the board boots from it.
 
 ## Notes
 
-- The codebase is intended for MicroPython-based robot hardware.
-- Use `main.py` as the primary startup script.
-- The modules are separated by feature area: UI, sensors, audio, input, and storage.
-- This README was created after cleaning unnecessary comments, blank lines, and extra whitespace in the Python source files.
+- Keep firmware code on the device and update only the required modules.
+- Use the `config.py` file to verify pin assignments before hardware tests.
