@@ -1,0 +1,18 @@
+ERC report (2026-05-27T19:24:44, Encoding UTF8)
+Report includes: Errors, Warnings
+
+***** Sheet /
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(5950 mils, 2550 mils): Symbol A1 Pin 39 [VSYS, Power input, Line]
+[ground_pin_not_ground]: Pin GND not connected to ground net
+    ; warning
+    @(6150 mils, 5450 mils): Symbol A1 Pin 3 [GND, Power output, Line]
+
+ ** ERC messages: 2  Errors 1  Warnings 1
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

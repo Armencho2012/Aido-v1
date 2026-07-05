@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /library
+Disallow: /billing
+Disallow: /settings
+
+Sitemap: https://myaide.vercel.app/sitemap.xml

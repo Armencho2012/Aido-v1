@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script>
+      (function () {
+        try {
+          var raw = localStorage.getItem('aide_user_settings');
+          var parsed = raw ? JSON.parse(raw) : null;
+          var theme = parsed && parsed.theme ? parsed.theme : 'dark';
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    <title>Aide | Turn Notes into Quizzes, Flashcards, Maps, and Podcasts</title>
+    <meta name="google-site-verification" content="Xxa2Jnnu8pbpy9kMF7LMXpcIkT_DPJr-ZnYFnMJfUt0" />
+    <meta name="description" content="Aide transforms notes, PDFs, and images into AI study materials: summaries, quizzes, flashcards, knowledge maps, tutor chat, course plans, and podcasts." />
+    <meta name="author" content="Aide" />
+    <meta name="keywords" content="AI study assistant, quiz generator, flashcards generator, knowledge map, AI tutor chat, podcast generator, PDF study tool, multilingual learning" />
+    <meta name="robots" content="index, follow" />
+    <meta name="application-name" content="Aide" />
+    <meta name="theme-color" content="#1576f6" />
+
+    <meta property="og:title" content="Aide | Turn Notes into Quizzes, Flashcards, Maps, and Podcasts" />
+    <meta property="og:description" content="Upload notes, PDFs, or images and instantly generate summaries, quizzes, flashcards, knowledge maps, tutor chat, and podcasts." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Aide" />
+    <meta property="og:url" content="https://myaide.vercel.app/" />
+    <meta property="og:image" content="https://myaide.vercel.app/placeholder.svg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://myaide.vercel.app/" />
+    <link rel="sitemap" type="application/xml" href="https://myaide.vercel.app/sitemap.xml" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2524086079117908"
+     crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aide | AI Study Assistant" />
+    <meta name="twitter:description" content="AI study workflows for summaries, quizzes, flashcards, maps, chat tutoring, and podcasts." />
+    <meta name="twitter:image" content="https://myaide.vercel.app/placeholder.svg" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Aide",
+            "url": "https://myaide.vercel.app/",
+            "description": "AI study assistant for summaries, quizzes, flashcards, maps, chat, and podcasts"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Aide",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "Web",
+            "url": "https://myaide.vercel.app/",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "AI summaries",
+              "Quiz generation",
+              "Flashcards",
+              "Knowledge map",
+              "Tutor chat",
+              "Podcast generation",
+              "PDF export",
+              "Multilingual support"
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

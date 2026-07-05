@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "functions": {
+    "api/voice.js": {
+      "maxDuration": 60,
+      "regions": ["fra1"]
+    }
+  },
+  "routes": [
+    { "src": "/api/voice", "dest": "/api/voice.js" }
+  ]
+}
